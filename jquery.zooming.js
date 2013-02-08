@@ -17,8 +17,8 @@
                     onEvents.onMouseEnter(event);
                 }, settings.timeStep);
             } else {
-                var bigImageWidth = bigImage.width();
-                var bigImageHeight = bigImage.height();
+                var bigImageWidth = bigImage.width() + 2 * settings.border;
+                var bigImageHeight = bigImage.height() + 2 * settings.border;
 
                 var containerHeight = container.height();
                 var containerWidth = container.width();
@@ -83,8 +83,8 @@
             });
 
             $.each(loaded, function() {
-                var bigImageWidth = this.width();
-                var bigImageHeight = this.height();
+                var bigImageWidth = this.width() + 2 * settings.border;
+                var bigImageHeight = this.height() + 2 * settings.border;
                 var smallImage = this.siblings('img');
 
                 var widthRatio = bigImageWidth / settings.smallImageWidth;
@@ -149,7 +149,8 @@
         timeStep: 100,
         onDocumentLoad: false,
         padding: 30,
-        onContainerEnter: false
+        onContainerEnter: false,
+        border: 0
 };
 
 })(jQuery);
