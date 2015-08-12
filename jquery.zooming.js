@@ -113,7 +113,7 @@
         } else if (typeof method === 'object' || !method) {
             methods.init.apply(this, arguments);
         } else {
-            $.error('Method ' +  method + ' does not exist on jQuery.editortooltip');
+            $.error('Method ' +  method + ' does not exist on jQuery.zooming');
         }
     };
 
